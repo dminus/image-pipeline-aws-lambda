@@ -39,6 +39,7 @@ aws cloudformation package --template-file ./sam-template.yml --s3-bucket ${S3_B
 
 aws cloudformation deploy --template-file ./packaged-sam-template.yml --stack-name ${STACK_NAME}  --capabilities CAPABILITY_IAM
 
-echo "Run $(dirname $0)/cleanupSam.sh to clean up stack resources and s3 bucket."
+echo -e "To clean up stack resources and s3 bucket, run:\n"
+echo "$(dirname $0)/cleanupSam.sh ${S3_BUCKET} ${STACK_NAME}"
 
 exit 0
