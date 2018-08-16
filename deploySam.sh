@@ -38,3 +38,7 @@ aws s3 mb s3://${S3_BUCKET}
 aws cloudformation package --template-file ./sam-template.yml --s3-bucket ${S3_BUCKET} --output-template-file packaged-sam-template.yml
 
 aws cloudformation deploy --template-file ./packaged-sam-template.yml --stack-name ${STACK_NAME}  --capabilities CAPABILITY_IAM
+
+echo "Run $(dirname $0)/cleanupSam.sh to clean up stack resources and s3 bucket."
+
+exit 0
