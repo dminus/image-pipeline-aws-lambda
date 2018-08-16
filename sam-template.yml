@@ -15,7 +15,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: ./image-pipeline-trigger
       Policies:
         - AWSStepFunctionsFullAccess
@@ -33,7 +33,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: ./image-analysis
       Policies:
         - AmazonRekognitionFullAccess
@@ -42,7 +42,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: ./image-resize
       Policies:
         - AmazonS3FullAccess
@@ -56,7 +56,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: ./image-db-update
       Policies:
         - AmazonDynamoDBFullAccess
@@ -68,7 +68,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: ./image-api
       Policies:
         - AmazonDynamoDBReadOnlyAccess
